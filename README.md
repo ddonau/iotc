@@ -1,4 +1,4 @@
-# Innovator IoT Challenge Object Detection 
+# iotc
 
 Interacts with TensorFlow Object API (https://github.com/tensorflow/models/tree/master/research/object_detection) as a web service. 
 
