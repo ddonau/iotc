@@ -1,38 +1,23 @@
-# Tensorflow Object Detection API Web Service
+# Innovator IoT Challenge Object Detection 
 
-Thie digital guide dog app turns the [TensorFlow Object API](https://github.com/tensorflow/models/tree/master/research/object_detection) into a web service. 
-A Python Flask web server is used to interact with a JavaScript a client library. 
-The example shows how you can extract frames from WebRTC's getUserMedia, upload them to the API, and then use the canvas to display them.
-This allows use of the TensorFlow Object API on any HTML `<video>` element.
+Interacts with TensorFlow Object API (https://github.com/tensorflow/models/tree/master/research/object_detection) as a web service. 
+
+Relied heavily on this post and code from here: https://webrtchacks.com/webrtc-cv-tensorflow/
 
 
-## Quick start with Docker
+## Run with Docker
 ```$xslt
-docker run -it -p 5000:5000 ddonaught/dgd:runserver
+docker run -it -p 5000:5000 ddonaught/dgd_vision:latest
 ```
 
 ### Manual install
 
 Follow the TensorFlow Object API install [instructions](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md).
-Then run the the instructions above.
 
-## Example web apps
+## Web Interface
 
 Point your browser to:
--  `https://localhost:5000/local` - shows a mirrored video from a webcam
-- `https://localhost:5000/video` - shows object detection running on a HTML `<video>` tag
-
-## Browser support
-
-WebRTC browsers have secure origin restrictions: 
-- Chrome will only work on `localhost` unless you add TLS certificates to your server
-- Firefox will work on any domain as long as you allow it
-- Safari will work, but you will need to "Allow Media Capture on Insecure Domains" 
-
-These should all work fine with any other video source.
-
-
-The Edge browser is currently not supported (polyfill for `canvas.toBlob` needed)
+-  `https://localhost:5000/local` - Shows a video stream from a camera and begins object detect
 
 
 ## API Details
