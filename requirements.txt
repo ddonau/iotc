@@ -1,0 +1,6 @@
+Flask
+Pillow>=1.0
+tensorflow==v1.4.0
+six
+matplotlib
+google-cloud-texttospeech
