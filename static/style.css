@@ -3,15 +3,13 @@ body {
     color: #3c82f7;
 }
 
-
 .split {
-    height: 100%;
     width: 83%;
     position: fixed;
     z-index: 1;
     top: 0;
     overflow-x: hidden;
-    padding-top: 20px;
+    overflow-y: hidden;
 }
 
 .left {
@@ -23,3 +21,14 @@ body {
     right: 0;
     background-color: #33495d;
 }
+
+
+
+html, body{height:100%;} 
+#outer{
+min-height:100%;
+}
+
+* html #outer{height:100%;} /* for IE 6, if you care */
+
+body, p { margin:0; padding:0}

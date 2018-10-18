@@ -15,9 +15,9 @@ def after_request(response):
     return response
 
 
-@app.route('/')
+@app.route('/welcome')
 def index():
-    return Response('Welcome to the IoT dgd PoC')
+    return Response(open('./static/welcome.html').read(), mimetype="text/html")
 
 
 @app.route('/local')
@@ -37,7 +37,7 @@ def image():
         else:
             threshold = float(threshold)
 
-        # finally run the image through tensor flow object detection`
+        # finally run the image through tensor flow object detection
         image_object = Image.open(image_file)
         objects = object_detection_api.get_objects(image_object, threshold)
         return objects

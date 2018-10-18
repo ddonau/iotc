@@ -53,7 +53,7 @@ function drawBoxes(objects) {
         drawCtx.strokeRect(x, y, width, height);
         console.log(object.class_name)
         var object = object.class_name
-        var n = object.toString();
+        object = object.toString();
         speechSynthesis.speak(new SpeechSynthesisUtterance("There is a" + n + "ahead"))
     });
 }
