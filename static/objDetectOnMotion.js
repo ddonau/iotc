@@ -1,5 +1,5 @@
 /**
- *
+ * Client side of Tensor Flow Object Detection Web API
  */
 
 //Parameters
@@ -53,7 +53,7 @@ function drawBoxes(objects) {
             x = drawCanvas.width - (x + width)
         }
 
-        drawCtx.fillText(object.class_name + " - " + Math.round(object.score * 100) + " % ", x + 5, y + 20);
+        drawCtx.fillText(object.class_name + " - " + Math.round(object.score * 100) + "%", x + 5, y + 20);
         drawCtx.strokeRect(x, y, width, height);
 
     });
@@ -148,7 +148,7 @@ function startObjectDetection() {
 
     console.log("starting object detection");
 
-    //Set canvas sizes based on input video
+    //Set canvas sizes base don input video
     drawCanvas.width = v.videoWidth;
     drawCanvas.height = v.videoHeight;
 

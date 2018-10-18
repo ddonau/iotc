@@ -2,6 +2,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+    <link type="text/css" rel="stylesheet" href="style.css">
     <title>dgd IoT</title>
     <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
     <style>
@@ -23,7 +25,26 @@
     </style>
 </head>
 <body>
-<video id="myVideo" autoplay></video>
+
+<div class="split right">
+  <div class="centered">
+    <video id="myVideo" autoplay></video>
+  </div>
+</div>
+
+<div class="split left">
+  <div class="centered">
+  </div>
+</div>
+     
+
+
+
+
+
+
+
+
 <script src="/static/local.js"></script>
 <script id="objDetect" src="/static/objDetect.js" data-source="myVideo" data-mirror="true" data-uploadWidth="1280" data-scoreThreshold="0.40"></script>
 </body>

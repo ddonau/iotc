@@ -12,8 +12,8 @@ object = "Car"
 # Set the text input to be synthesized
 synthesis_input = texttospeech.types.SynthesisInput(text="There is a " + object + " ahead")
 
-# Build the voice request, select the language code ("en-AU") and the ssml
-# voice gender ("neutral")
+# Build the voice request, select the language code and the ssml
+# voice gender
 voice = texttospeech.types.VoiceSelectionParams(
     language_code='en-AU',
     ssml_gender=texttospeech.enums.SsmlVoiceGender.NEUTRAL)
@@ -30,4 +30,6 @@ response = client.synthesize_speech(synthesis_input, voice, audio_config)
 with open('output.mp3', 'wb') as out:
     # Write the response to the output file.
     out.write(response.audio_content)
-    print('Audio content written to file "output.mp3"')
+
+    outputSpJson = response.audio_content
+    return outputSpJson

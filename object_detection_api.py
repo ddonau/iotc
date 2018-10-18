@@ -8,7 +8,7 @@ import tensorflow as tf
 import json
 
 if tf.__version__ != '1.4.0':
-  raise ImportError('Please change your tensorflow installation to 1.4.0')
+  raise ImportError('Please change your tensorflow installation to v1.4.0')
 
 # ENV SETUP  ### CWH: remove matplot display and manually add paths to references
 
@@ -77,7 +77,7 @@ with detection_graph.as_default():
 # added to put object in JSON
 class Object(object):
     def __init__(self):
-        self.name="dgd TensorFlow Object Detection REST API"
+        self.name="dgd REST API"
 
     def toJSON(self):
         return json.dumps(self.__dict__)

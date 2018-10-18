@@ -9,7 +9,7 @@ const uploadWidth = s.getAttribute("data-uploadWidth") || 640; //the width of th
 const mirror = s.getAttribute("data-mirror") || false; //mirror the boundary boxes
 const scoreThreshold = s.getAttribute("data-scoreThreshold") || 0.5;
 const apiServer = s.getAttribute("data-apiServer") || window.location.origin + '/image'; //the full TensorFlow Object Detection API server url
-//const apiServer = s.getAttribute("data-apiServer") || window.location.origin + '/image'; //the full GCP API server url
+
 
 //Video element selector
 v = document.getElementById(sourceVideo);
@@ -28,6 +28,7 @@ let imageCtx = imageCanvas.getContext("2d");
 let drawCanvas = document.createElement('canvas');
 document.body.appendChild(drawCanvas);
 let drawCtx = drawCanvas.getContext("2d");
+
 
 //draw boxes and labels on each detected object
 function drawBoxes(objects) {
@@ -48,11 +49,12 @@ function drawBoxes(objects) {
             x = drawCanvas.width - (x + width)
         }
 
-        drawCtx.fillText(object.class_name + " " + Math.round(object.score * 100) + "%", x + 5, y + 20);
+        drawCtx.fillText(object.class_name + " - " + Math.round(object.score * 100) + "%", x + 5, y + 20);
         drawCtx.strokeRect(x, y, width, height);
-
-        console.log(object.class_name);
-
+        console.log(object.class_name)
+        var object = object.class_name
+        var n = object.toString();
+        speechSynthesis.speak(new SpeechSynthesisUtterance("There is a" + n + "ahead"))
     });
 }
 
