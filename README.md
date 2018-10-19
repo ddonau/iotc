@@ -10,6 +10,8 @@ The following code interacts with the TensorFlow Object API using webRTC for rea
 docker run -it -p 5000:5000 ddonaught/iotc:latest
 ```
 
+https://hub.docker.com/r/ddonaught/iotc/
+
 ## Web Interface
 
 After running the above, stream can be found at:
