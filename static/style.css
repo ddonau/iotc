@@ -1,9 +1,9 @@
 body {
     font-family: Arial;
-    background-color: #f3f3f3;
 }
 
 .split {
+    height: 100%;
     width: 83%;
     position: fixed;
     z-index: 1;

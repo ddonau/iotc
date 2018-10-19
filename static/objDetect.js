@@ -54,7 +54,7 @@ function drawBoxes(objects) {
         console.log(object.class_name)
         var object = object.class_name
         object = object.toString();
-        speechSynthesis.speak(new SpeechSynthesisUtterance("There is a" + n + "ahead"))
+        speechSynthesis.speak(new SpeechSynthesisUtterance("There is a" + object + "ahead"))
     });
 }
 
