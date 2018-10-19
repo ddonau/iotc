@@ -1,6 +1,6 @@
 body {
     font-family: Arial;
-    color: #3c82f7;
+    background-color: #f3f3f3;
 }
 
 .split {
@@ -22,13 +22,3 @@ body {
     background-color: #33495d;
 }
 
-
-
-html, body{height:100%;} 
-#outer{
-min-height:100%;
-}
-
-* html #outer{height:100%;} /* for IE 6, if you care */
-
-body, p { margin:0; padding:0}
